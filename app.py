@@ -3,6 +3,7 @@ from flask import Flask, jsonify, request, render_template,url_for
 app = Flask(__name__, template_folder="templates")
 from pymongo import MongoClient
 from datetime import datetime, timedelta
+from flask_wtf.csrf import CSRFProtect
 import hashlib
 
 # 설치해야할 패키지 이름: PyJWT
@@ -87,4 +88,7 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
+    app.config['SECRET_KEY'] = 'SPARTA'
+    csrf = CSRFProtect()
+    csrf.init_app(app)
     app.run("0.0.0.0", port=8000, debug=True)
