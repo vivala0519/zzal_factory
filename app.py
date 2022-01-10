@@ -28,6 +28,7 @@ def home():
 
 @app.route('/making')
 def making():
+
    return render_template('making.html')
 
 @app.route('/main')
