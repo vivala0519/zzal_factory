@@ -1,5 +1,9 @@
-function home() {
+function login() {
   window.location.href = "/";
+}
+
+function home() {
+  window.location.href = "/main";
 }
 
 function making() {
