@@ -14,8 +14,10 @@ function main() {
   window.location.href = "/main";
 }
 
-
 function members() {
   window.location.href = "/members";
 }
 
+function users() {
+  window.location.href = "/users";
+}
