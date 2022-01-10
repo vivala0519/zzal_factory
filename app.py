@@ -20,6 +20,10 @@ def home():
 def making():
    return render_template('making.html')
 
+@app.route('/main')
+def main():
+   return render_template('main.html')
+
 @app.route('/members')
 def members():
    return render_template('members.html')
