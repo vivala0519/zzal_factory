@@ -214,10 +214,18 @@
 </div>
 <script>
     let pw = document.getElementById("input_password");
+    let pattern = /^(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
     pw.addEventListener('input', function () {
-        if (pw === "") {
-            $("#help-password").text("비밀번호를 입력해주세요.").removeClass("is-safe").addClass("is-danger")
-            $("#input-password").focus()
+        if (pw.value === "") {
+            // 비밀번호를 입력해주라는 css
+            console.log("please input")
+        }
+        if (pattern.test(pw.value)) {
+            // 비밀번호 형식이 맞음
+            console.log("ok")
+        } else {
+            // 비밀번호 형식이 다름
+            console.log("not ok")
         }
     });
 </script>
