@@ -21,6 +21,7 @@ secret_for_jwt = 'SPARTA'
 client = MongoClient('localhost', 27017)
 db = client.zzalFactory
 
+
 @app.route('/')
 def home():
    return render_template('index.html')
