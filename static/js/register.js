@@ -4,7 +4,7 @@ function register() {
     let password = $("#input_password").val()
     let password2 = $("#confirm_password2").val()
 
-
+    console.log("a")
    // if (password == "") {
    //     $("#help-password").text("비밀번호를 입력해주세요.").removeClass("is-safe").addClass("is-danger")
    //     $("#input-password").focus()

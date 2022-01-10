@@ -212,6 +212,14 @@
         <div class="another-modal">
                     </div>
 </div>
-
+<script>
+    let pw = document.getElementById("input_password");
+    pw.addEventListener('input', function () {
+        if (pw === "") {
+            $("#help-password").text("비밀번호를 입력해주세요.").removeClass("is-safe").addClass("is-danger")
+            $("#input-password").focus()
+        }
+    });
+</script>
 </body>
 </html>
