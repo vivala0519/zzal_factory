@@ -45,29 +45,29 @@ def api_register():
 
     pw_hash = hashlib.sha256(pw_receive.encode('utf-8')).hexdigest()
 
-    db.user.insert_one({'id': id_receive, 'pw': pw_hash})
+    db.users.insert_one({'id': id_receive, 'pw': pw_hash})
 
     return jsonify({'result': 'success'})
 
 @app.route('/log_in', methods=['POST'])
 def sign_in():
     # 로그인
-    username_receive = request.form['id_give']
+    id_receive = request.form['id_give']
     password_receive = request.form['pw_give']
-
+    print(id_receive, password_receive)
     # 비밀번호 암호화
     pw_hash = hashlib.sha256(password_receive.encode('utf-8')).hexdigest()
     # db에서 유저 찾기
-    result = db.users.find_one({'username': username_receive, 'password': pw_hash})
+    result = db.users.find_one({'id': id_receive, 'pw': pw_hash})
 
     # 유저를 찾으면 jwt 생성 및 발급
     if result is not None:
         payload = {
-         'id': username_receive,
+         'id': id_receive,
          'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)  # 로그인 24시간 유지
         }
         token = jwt.encode(payload, secret_for_jwt, algorithm='HS256').decode('utf-8')
-
+        
         # 토큰 클라이언트에 리턴
         return jsonify({'result': 'success', 'token': token})
     # 찾지 못하면
