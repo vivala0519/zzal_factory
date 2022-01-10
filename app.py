@@ -1,6 +1,14 @@
 from datetime import timedelta
 from flask import Flask, jsonify, request, render_template,url_for
 app = Flask(__name__, template_folder="templates")
+from pymongo import MongoClient
+from datetime import datetime, timedelta
+import hashlib
+
+# 설치해야할 패키지 이름: PyJWT
+import jwt
+# JWT 토큰을 만들 때 필요한 비밀문자열.
+secret_for_jwt = 'SPARTA'
 
 # from routes import *
 
@@ -10,7 +18,8 @@ app = Flask(__name__, template_folder="templates")
 # from pymongo import MongoClient
 
 # client = MongoClient(SECRET_KEY, 27017, authSource="admin")
-# db = client.dbusers
+client = MongoClient('localhost', 27017)
+db = client.dbusers
 
 @app.route('/')
 def home():
@@ -27,6 +36,44 @@ def main():
 @app.route('/members')
 def members():
    return render_template('members.html')
+
+
+@app.route('/register', methods=['POST'])
+def api_register():
+    id_receive = request.form['id_give']
+    pw_receive = request.form['pw_give']
+
+    pw_hash = hashlib.sha256(pw_receive.encode('utf-8')).hexdigest()
+
+    db.user.insert_one({'id': id_receive, 'pw': pw_hash})
+
+    return jsonify({'result': 'success'})
+
+@app.route('/log_in', methods=['POST'])
+def sign_in():
+    # 로그인
+    username_receive = request.form['id_give']
+    password_receive = request.form['pw_give']
+
+    # 비밀번호 암호화
+    pw_hash = hashlib.sha256(password_receive.encode('utf-8')).hexdigest()
+    # db에서 유저 찾기
+    result = db.users.find_one({'username': username_receive, 'password': pw_hash})
+
+    # 유저를 찾으면 jwt 생성 및 발급
+    if result is not None:
+        payload = {
+         'id': username_receive,
+         'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)  # 로그인 24시간 유지
+        }
+        token = jwt.encode(payload, secret_for_jwt, algorithm='HS256').decode('utf-8')
+
+        # 토큰 클라이언트에 리턴
+        return jsonify({'result': 'success', 'token': token})
+    # 찾지 못하면
+    else:
+        return jsonify({'result': 'fail', 'msg': '아이디/비밀번호가 일치하지 않습니다.'})
+
 
 @app.errorhandler(404)
 def page_not_found(error):
