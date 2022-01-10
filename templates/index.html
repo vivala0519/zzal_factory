@@ -228,6 +228,16 @@
             console.log("not ok")
         }
     });
+    let pw_confirm = document.getElementById("confirm_password2");
+    pw_confirm.addEventListener('input', function () {
+       if (pw_confirm.value === pw.value) {
+           // 비밀번호랑 컨펌 비밀번호랑 일치함
+           console.log("ok")
+       } else {
+           // 비밀번호랑 컨펌 비밀번호랑 일치하지 않음
+           console.log("not ok")
+       }
+    });
 
 </script>
 </body>
