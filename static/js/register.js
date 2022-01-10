@@ -1,5 +1,6 @@
 function register() {
     let id = $("#input_id").val()
+    let nickname = $("#nickname").val()
     let password = $("#input_password").val()
     let password2 = $("#confirm_password2").val()
 
@@ -31,7 +32,8 @@ function register() {
         url: "/register",
         data: {
             id_give: id,
-            pw_give: password
+            pw_give: password,
+            nickname: nickname
         },
         success: function (response) {
             alert("회원가입을 축하드립니다!")
