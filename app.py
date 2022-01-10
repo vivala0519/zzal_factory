@@ -37,6 +37,10 @@ def main():
 def members():
    return render_template('members.html')
 
+@app.route('/users')
+def users():
+   return render_template('users.html')
+
 
 @app.route('/register', methods=['POST'])
 def api_register():
