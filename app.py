@@ -1,13 +1,14 @@
 from datetime import timedelta
-from flask import Flask, jsonify, request, render_template,url_for
+from flask import Flask, jsonify, request, render_template, url_for
+
 app = Flask(__name__, template_folder="templates")
 from pymongo import MongoClient
 from datetime import datetime, timedelta
-from flask_wtf.csrf import CSRFProtect
 import hashlib
 
 # 설치해야할 패키지 이름: PyJWT
 import jwt
+
 # JWT 토큰을 만들 때 필요한 비밀문자열.
 secret_for_jwt = 'SPARTA'
 
@@ -25,24 +26,27 @@ db = client.zzalFactory
 
 @app.route('/')
 def home():
-   return render_template('index.html')
+    return render_template('index.html')
+
 
 @app.route('/making')
 def making():
+    return render_template('making.html')
 
-   return render_template('making.html')
 
 @app.route('/main')
 def main():
-   return render_template('main.html')
+    return render_template('main.html')
+
 
 @app.route('/members')
 def members():
-   return render_template('members.html')
+    return render_template('members.html')
+
 
 @app.route('/users')
 def users():
-   return render_template('users.html')
+    return render_template('users.html')
 
 
 @app.route('/register', methods=['POST'])
@@ -57,6 +61,7 @@ def api_register():
 
     return jsonify({'result': 'success'})
 
+
 @app.route('/log_in', methods=['POST'])
 def sign_in():
     # 로그인
@@ -69,8 +74,8 @@ def sign_in():
     # 유저를 찾으면 jwt 생성 및 발급
     if result is not None:
         payload = {
-         'id': id_receive,
-         'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)  # 로그인 24시간 유지
+            'id': id_receive,
+            'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)  # 로그인 24시간 유지
         }
         token = jwt.encode(payload, secret_for_jwt, algorithm='HS256')
 
@@ -88,7 +93,4 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    app.config['SECRET_KEY'] = 'SPARTA'
-    csrf = CSRFProtect()
-    csrf.init_app(app)
     app.run("0.0.0.0", port=8000, debug=True)
