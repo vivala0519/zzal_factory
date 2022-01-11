@@ -1,5 +1,6 @@
 from datetime import timedelta
-from flask import Flask, jsonify, request, render_template, url_for
+import os
+from flask import Flask, jsonify, request, render_template, url_for, send_file, redirect
 
 app = Flask(__name__, template_folder="templates")
 from pymongo import MongoClient
@@ -58,6 +59,17 @@ def making():
 
     return render_template('making.html', image_file="temp/temp.png")
 
+@app.route('/download', methods=['GET'])
+def download():
+    if not os.path.isfile("./static/temp/temp.png"):
+        return redirect(url_for('making'))
+
+    file_name = f"./static/temp/temp.png"
+    return send_file(file_name,
+                mimetype='image/png',
+                attachment_filename='./static/temp/temp.png',
+                as_attachment=True)
+
 
 @app.route('/main')
 def main():
@@ -109,7 +121,6 @@ def sign_in():
     # 찾지 못하면
     else:
         return jsonify({'result': 'fail', 'msg': '아이디/비밀번호가 일치하지 않습니다.'})
-
 
 @app.errorhandler(404)
 def page_not_found(error):
