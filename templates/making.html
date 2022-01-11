@@ -81,7 +81,7 @@
  <div class="flex items-center justify-center" x-data="{openMenu:1}">
         <div class="relative inline-block">
             <!-- Dropdown toggle button -->
-            <button class="flex flex-row z-10 p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
             @click="openMenu !== 2 ? openMenu = 2 : openMenu = null"> 짤 고르기 
 
@@ -102,7 +102,7 @@
 
         <div class="relative inline-block">
             <!-- Dropdown toggle button -->
-            <button class="flex flex-row z-10 p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
             @click="openMenu !== 3 ? openMenu = 3 : openMenu = null"> 폰트 종류 
 
@@ -123,7 +123,7 @@
 
         <div class="relative inline-block">
             <!-- Dropdown toggle button -->
-            <button class="flex flex-row z-10 p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
             @click="openMenu !== 4 ? openMenu = 4 : openMenu = null"> 폰트 사이즈 
 
@@ -144,7 +144,7 @@
 
         <div class="relative inline-block">
             <!-- Dropdown toggle button -->
-            <button class="flex flex-row z-10 p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
             @click="openMenu !== 5 ? openMenu = 5 : openMenu = null"> 폰트 두께 
 
@@ -165,7 +165,7 @@
 
         <div class="relative inline-block">
             <!-- Dropdown toggle button -->
-            <button class="flex flex-row z-10 p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
             @click="openMenu !== 6 ? openMenu = 6 : openMenu = null"> 폰트 테두리 
 
@@ -189,8 +189,8 @@
     <p class="max-w-md mb-10 text-xs text-gray-600 sm:text-sm md:text-center">
       상상력을 펼쳐보세요!
     </p>
-          <button class="bg-blue-400 hover:bg-blue-300 font-bold uppercase px-4 xl:px-6 py-2 xl:py-3 rounded flex-shrink-1 flex items-center ml-2">
-        <span class="text-sm text-gray-100 transition transform hover:scale-110 duration-200 ease-in-out"><i class="fa fa-arrow-circle-down mr-1 animate-bounce" aria-hidden="true"></i> 제출하기</span>
+          <button class="flex items-center px-4 py-2 ml-2 font-bold uppercase bg-blue-400 rounded hover:bg-blue-300 xl:px-6 xl:py-3 flex-shrink-1">
+        <span class="text-sm text-gray-100 transition duration-200 ease-in-out transform hover:scale-110"><i class="mr-1 fa fa-arrow-circle-down animate-bounce" aria-hidden="true"></i> 제출하기</span>
       </button>  
       </div> 
   </div>
@@ -198,7 +198,12 @@
 <div class="flex flex-col items-center">
 
 <textarea placeholder="바르고 고운말을 사용해주세요!" class="w-3/5 p-3 mb-10 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" rows="2"> </textarea>
-  <img src="https://kitwind.io/assets/kometa/half-browser.png" class="w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md" alt="" />
+<div>
+<span class="absolute z-10 text-xl text-blue-600">여기에 유저가 쓴 글이 나타날거에여! index.html 밑에 있는 만드셨던 스크립트에 제가 추가한 코드를 참고하시면 실시간으로 값이 변하게 하실 수 있을거에여!
+자세한 위치는 나중에 이미지와 겹치도록 absolute 같은걸로 포지션을 조절할 수 있으니 걱정마시구 작업해주세여
+</span>
+  <img src="https://kitwind.io/assets/kometa/half-browser.png" class="relative w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md" alt="" />
+  </div>
 </div>
 </div>
     <!-- footer -->
