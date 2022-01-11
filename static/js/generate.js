@@ -1,6 +1,6 @@
 function generate() {
     let text = $("#text-area").val();
-    let zzal = $("#zzalback").innerHTML;
+    let zzal = $("#zzalback").innerText;
     let img = "";
     console.log(zzal);
 
