@@ -35,6 +35,7 @@ def home():
 @app.route('/making', methods=['GET', 'POST'])
 def making():
     if request.method == 'POST':
+        img_receive = request.form['img_give']
         text_receive = request.form['text_give']
         caption = text_receive
         wrapper = textwrap.TextWrapper(width=50)
@@ -44,7 +45,7 @@ def making():
             caption_new = caption_new + ii + '\n'
         caption_new += word_list[-1]
 
-        file = 'double.jpg'
+        file = img_receive + '.png'
         image = Image.open('static/zzal/' + file)
         draw = ImageDraw.Draw(image)
 
@@ -53,9 +54,9 @@ def making():
         W, H = image.size
         x, y = 0.5 * (W - w), 0.90 * H - h
         draw.text((x, y), caption_new, fill="white", font=font)
-        image.save('static/temp/aaa.jpg')
+        image.save('static/temp/aaa.png')
 
-    return render_template('making.html', image_file="temp/aaa.jpg")
+    return render_template('making.html', image_file="temp/aaa.png")
 
 
 @app.route('/main')
