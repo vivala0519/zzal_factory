@@ -55,7 +55,7 @@ def making():
         draw.text((x, y), caption_new, fill="white", font=font)
         image.save('static/temp/aaa.jpg')
 
-    return render_template('making.html')
+    return render_template('making.html', image_file="temp/aaa.jpg")
 
 
 @app.route('/main')

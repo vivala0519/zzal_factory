@@ -6,6 +6,7 @@ function generate() {
         url: "/making",
         data: {text_give: text},
         success: function (response) {
+
             window.location.href = '/making'
         }
     })
