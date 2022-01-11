@@ -151,7 +151,7 @@
     <div class="hidden md:contents">
       <span class="text-xl text-purple-400 font-bold">1.</span> 짤을 고른다. <span class="text-xl text-purple-500 font-bold ml-3">2.</span> 색깔을 고른다. <span class="text-xl text-purple-600 font-bold ml-3">3.</span> 대사를 바꾼다. <span class="text-xl text-purple-700 font-bold mr-6">4.</span>
       </div>
-                <button href="" onclick="generate()"class="bg-transparent rounded-lg font-bold text-purple-300 text-center transition duration-300 ease-in-out hover:text-purple-600">
+                <button href="" onclick="generate()" class="bg-transparent rounded-lg font-bold text-purple-300 text-center transition duration-300 ease-in-out hover:text-purple-600">
                 Generate!
             </button>
             <a href="/download" class="bg-transparent rounded-lg font-bold text-purple-300 text-center transition duration-300 ease-in-out hover:text-purple-600"> Download</a>
@@ -162,10 +162,10 @@
 
 <div class="flex flex-col items-center">
 
-<input id="text-area" placeholder="바르고 고운말을 사용해주세요!" class="w-3/5 p-3 mb-10 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
+<input id="text-area" onchange=colorSet(); placeholder="바르고 고운말을 사용해주세요!" class="w-3/5 p-3 mb-10 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
 
-<!-- <span id='result' class="text-3xl text-blue-600 items-center justify-center mt-10 -mb-10 z-10 colors">대사를 확인해보세요!
-</span> -->
+<span id='result' class="text-3xl text-blue-600 items-center justify-center mt-10 -mb-10 z-10 colors">대사를 확인해보세요!
+</span>
 <div class="mb-20">
 
     {% if True %}
