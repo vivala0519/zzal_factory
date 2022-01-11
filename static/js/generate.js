@@ -22,3 +22,19 @@ function generate() {
         }
     })
 }
+
+
+$(document).ready(function(){
+
+	$("#text-area").keyup(function(){
+	$("#result").text($("#text-area").val());
+
+	});
+
+});
+
+function colorSet (color) {
+
+$(".colors").css("color", color)
+
+}
