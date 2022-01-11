@@ -29,8 +29,11 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/making')
+@app.route('/making', methods=['GET', 'POST'])
 def making():
+    if request.method == 'POST':
+        text_receive = request.form['text_give']
+        print(text_receive)
     return render_template('making.html')
 
 
