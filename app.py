@@ -2,9 +2,6 @@ from datetime import timedelta
 import os
 from flask import Flask, jsonify, request, render_template, url_for, send_file, redirect
 
-from flask import Flask, jsonify, request, render_template, url_for
-
-
 app = Flask(__name__, template_folder="templates")
 from pymongo import MongoClient
 from datetime import datetime, timedelta
