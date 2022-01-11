@@ -4,7 +4,13 @@
   }
 
   .login{
-  background: url('https://user-images.githubusercontent.com/89088205/147875454-28c46585-33b1-40fb-ae32-cb82547df00a.jpg');
+  background: url('https://user-images.githubusercontent.com/89088205/148895265-c2960f52-91c7-48de-a109-180a9fc0a315.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .making{
+  background: url('https://cdn.notefolio.net/img/d7/5b/d75bf02e2a35f76dba6ed5eeccde793c45d74edd83df838e31290603ceb5c5c9_v1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
