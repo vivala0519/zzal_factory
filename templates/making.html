@@ -59,7 +59,7 @@
           항해 D반 5조
         </p>
       </div>
-      <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+      <h2 class="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
         <span class="relative inline-block">
           <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
             <defs>
@@ -69,12 +69,12 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          <span class="relative">재미있는</span>
+          <span class="relative">짤공장</span>
         </span>
-       짤 생성기!
+       공장장은 누구?!
       </h2>
       <p class="text-base text-gray-700 md:text-lg">
-        그림을 선택하고 문구를 바꾸어 보세요!
+        재미있는 짤을 고르고, 친구들과 공유해보세요!
       </p>
     </div>
 <!-- 
@@ -84,7 +84,7 @@
             <!-- Dropdown toggle button -->
             <button id="zzalback" class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
-            @click="openMenu !== 2 ? openMenu = 2 : openMenu = null"> 짤 고르기 
+            @click="openMenu !== 2 ? openMenu = 2 : openMenu = null"> 짤 고르기(곽철용짤)
 
                 <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -93,6 +93,7 @@
 
             <!-- Dropdown menu -->
             <div class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800" x-show="openMenu ==  2">
+            
             <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="selectzzal(this)">묻고 더블로 가!</a>
             <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="selectzzal(this)">한 끗인데 5억을 태워?</a>
             <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="selectzzal(this)">피카츄 짤</a>
@@ -105,7 +106,7 @@
             <!-- Dropdown toggle button -->
             <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
-            @click="openMenu !== 3 ? openMenu = 3 : openMenu = null"> 폰트 종류 
+            @click="openMenu !== 3 ? openMenu = 3 : openMenu = null"> 짤 고르기(고양이짤)
 
                 <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -126,7 +127,7 @@
             <!-- Dropdown toggle button -->
             <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
-            @click="openMenu !== 4 ? openMenu = 4 : openMenu = null"> 폰트 사이즈 
+            @click="openMenu !== 4 ? openMenu = 4 : openMenu = null"> font color 
 
                 <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -135,81 +136,45 @@
 
             <!-- Dropdown menu -->
             <div class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800" x-show="openMenu ==  4">
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 무슨무슨 짤 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 고양이 짤 2 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 피카츄 짤</a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 개비스콘 짤 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 댕댕이 짤 </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('red');" > red </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('blue');"> blue </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('green');"> green </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('yellow');"> yellow </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('black');"> black </a>
             </div>
         </div>
-
-        <div class="relative inline-block">
-            <!-- Dropdown toggle button -->
-            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
-            
-            @click="openMenu !== 5 ? openMenu = 5 : openMenu = null"> 폰트 두께 
-
-                <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </button>
-
-            <!-- Dropdown menu -->
-            <div class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800" x-show="openMenu ==  5">
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 무슨무슨 짤 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 고양이 짤 2 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 피카츄 짤</a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 개비스콘 짤 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 댕댕이 짤 </a>
-            </div>
-        </div>
-
-        <div class="relative inline-block">
-            <!-- Dropdown toggle button -->
-            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
-            
-            @click="openMenu !== 6 ? openMenu = 6 : openMenu = null"> 폰트 테두리 
-
-                <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-            </button>
-
-            <!-- Dropdown menu -->
-            <div class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800" x-show="openMenu ==  6">
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 무슨무슨 짤 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 고양이 짤 2 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 피카츄 짤</a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 개비스콘 짤 </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> 댕댕이 짤 </a>
-            </div>
-        </div>                
+  
       </div>
     </div>    
-<div class="flex flex-row">
-    <p class="max-w-md mb-10 text-xs text-gray-600 sm:text-sm md:text-center">
-      상상력을 펼쳐보세요!
-    </p>
-          <button class="flex items-center px-4 py-2 ml-2 font-bold uppercase bg-blue-400 rounded hover:bg-blue-300 xl:px-6 xl:py-3 flex-shrink-1" onclick="generate()">
-        <span class="text-sm text-gray-100 transition duration-200 ease-in-out transform hover:scale-110"><i class="mr-1 fa fa-arrow-circle-down animate-bounce" aria-hidden="true"></i> 제출하기</span>
-      </button>  
+<div class="flex flex-row mb-8">
+    <div class="text-xl text-gray-600 sm:text-md md:text-center grow ">
+    <div class="hidden md:contents">
+      <span class="text-xl text-purple-400 font-bold">1.</span> 짤을 고른다. <span class="text-xl text-purple-500 font-bold ml-3">2.</span> 색깔을 고른다. <span class="text-xl text-purple-600 font-bold ml-3">3.</span> 대사를 바꾼다. <span class="text-xl text-purple-700 font-bold mr-6">4.</span>
+      </div>
+                <a href="" onclick="generate()"class="bg-transparent rounded-lg font-bold text-purple-300 text-center transition duration-300 ease-in-out hover:text-purple-600">
+                Generate!
+            </a>
+            <a href="/download" class="bg-transparent rounded-lg font-bold text-purple-300 text-center transition duration-300 ease-in-out hover:text-purple-600"> Download</a>
+    </div>
+
       </div> 
   </div>
 
 <div class="flex flex-col items-center">
 
-<input id="text-area" placeholder="바르고 고운말을 사용해주세요!" class="w-3/5 p-3 mb-10 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" rows="2"> </input>
-<div>
-<span class="absolute z-10 text-xl text-blue-600">여기에 유저가 쓴 글이 나타날거에여! index.html 밑에 있는 만드셨던 스크립트에 제가 추가한 코드를 참고하시면 실시간으로 값이 변하게 하실 수 있을거에여!
-자세한 위치는 나중에 이미지와 겹치도록 absolute 같은걸로 포지션을 조절할 수 있으니 걱정마시구 작업해주세여
+<input id="text-area" onchange='printName()' placeholder="바르고 고운말을 사용해주세요!" class="w-3/5 p-3 mb-10 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
+
+<span id='result' class="text-3xl text-blue-600 items-center justify-center mt-10 -mb-10 z-10 colors">대사를 확인해보세요!
 </span>
+<div class="mb-20">
+
     {% if True %}
   <img src="{{ url_for('static', filename=image_file) }}" class="relative w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md" alt="" />
     {% endif %}
 </div>
-</div>
 
-<a href="/download">다운로드</a>
+
+</div>
 </div>
     <!-- footer -->
 </main>
