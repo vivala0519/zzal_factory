@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 from datetime import timedelta
 import os
 from flask import Flask, jsonify, request, render_template, url_for, send_file, redirect
-=======
+
 from flask import Flask, jsonify, request, render_template, url_for
->>>>>>> ce19087a87bac25e02f203e63316a2d2c8cf73be
+
 
 app = Flask(__name__, template_folder="templates")
 from pymongo import MongoClient
