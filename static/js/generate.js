@@ -1,13 +1,13 @@
 function generate() {
     let text = $("#text-area").val();
-    let zzal = $("#zzalback").innerText;
+    let zzal = $("#zzalback").text();
     let img = "";
     console.log(zzal);
 
     if (zzal==="묻고 더블로 가!") {
         img = "double";
         console.log("체크");
-    } else {
+    } else if(zzal === "한 끗인데 5억을 태워?"){
         img = "burning";
     }
 

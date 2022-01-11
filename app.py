@@ -54,9 +54,9 @@ def making():
         W, H = image.size
         x, y = 0.5 * (W - w), 0.90 * H - h
         draw.text((x, y), caption_new, fill="white", font=font)
-        image.save('static/temp/aaa.png')
+        image.save('static/temp/temp.png')
 
-    return render_template('making.html', image_file="temp/aaa.png")
+    return render_template('making.html', image_file="temp/temp.png")
 
 
 @app.route('/main')
