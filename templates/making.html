@@ -26,6 +26,7 @@
     <script src="../static/js/move.js"></script>
     <script src="../static/js/generate.js"></script>
     <script src="../static/js/selectzzal.js"></script>
+    <script src="../static/js/selectcolor.js"></script>
     <!-- css 파일들, 안쓰는걸 주석처리 -->    
 
 <!--    <link rel="stylesheet" type="text/css" href="../static/css/Create.css"> -->
@@ -125,7 +126,7 @@
 
         <div class="relative inline-block">
             <!-- Dropdown toggle button -->
-            <button class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
+            <button id="zzalcolor" class="z-10 flex flex-row p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none"
             
             @click="openMenu !== 4 ? openMenu = 4 : openMenu = null"> font color 
 
@@ -136,11 +137,11 @@
 
             <!-- Dropdown menu -->
             <div class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800" x-show="openMenu ==  4">
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('red');" > red </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('blue');"> blue </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('green');"> green </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('yellow');"> yellow </a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('black');"> black </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('red'); selectcolor(this);" >red</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('blue'); selectcolor(this);">blue</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('green'); selectcolor(this);">green</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('yellow'); selectcolor(this);">yellow</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onclick="colorSet('black'); selectcolor(this);">black</a>
             </div>
         </div>
   

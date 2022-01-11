@@ -38,6 +38,7 @@ def making():
     if request.method == 'POST':
         img_receive = request.form['img_give']
         text_receive = request.form['text_give']
+        color_receive = request.form['color_give']
         caption = text_receive
         wrapper = textwrap.TextWrapper(width=50)
         word_list = wrapper.wrap(text=caption)
@@ -54,7 +55,7 @@ def making():
         w, h = draw.textsize(caption_new, font=font)
         W, H = image.size
         x, y = 0.5 * (W - w), 0.90 * H - h
-        draw.text((x, y), caption_new, fill="white", font=font)
+        draw.text((x, y), caption_new, fill=color_receive, font=font)
         image.save('static/temp/temp.png')
 
     return render_template('making.html', image_file="temp/temp.png")
