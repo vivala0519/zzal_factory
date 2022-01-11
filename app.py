@@ -71,21 +71,6 @@ def download():
                 as_attachment=True)
 
 
-@app.route('/main')
-def main():
-    return render_template('main.html')
-
-
-@app.route('/members')
-def members():
-    return render_template('members.html')
-
-
-@app.route('/users')
-def users():
-    return render_template('users.html')
-
-
 @app.route('/register', methods=['POST'])
 def api_register():
     id_receive = request.form['id_give']
