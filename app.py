@@ -8,6 +8,9 @@ import hashlib
 
 # 설치해야할 패키지 이름: PyJWT
 import jwt
+import textwrap
+from PIL import Image, ImageFont, ImageDraw
+
 
 # JWT 토큰을 만들 때 필요한 비밀문자열.
 secret_for_jwt = 'SPARTA'
@@ -33,7 +36,25 @@ def home():
 def making():
     if request.method == 'POST':
         text_receive = request.form['text_give']
-        print(text_receive)
+        caption = text_receive
+        wrapper = textwrap.TextWrapper(width=50)
+        word_list = wrapper.wrap(text=caption)
+        caption_new = ''
+        for ii in word_list[:-1]:
+            caption_new = caption_new + ii + '\n'
+        caption_new += word_list[-1]
+
+        file = 'double.jpg'
+        image = Image.open('static/zzal/' + file)
+        draw = ImageDraw.Draw(image)
+
+        font = ImageFont.truetype("static/ttf/NanumGothic.ttf", size=40, encoding="UTF-8")
+        w, h = draw.textsize(caption_new, font=font)
+        W, H = image.size
+        x, y = 0.5 * (W - w), 0.90 * H - h
+        draw.text((x, y), caption_new, fill="white", font=font)
+        image.save('static/temp/aaa.jpg')
+
     return render_template('making.html')
 
 
