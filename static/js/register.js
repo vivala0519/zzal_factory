@@ -66,8 +66,14 @@ function register() {
             nickname: nickname
         },
         success: function (response) {
-            alert("회원가입을 축하드립니다!")
-            window.location.replace("/")
+            if (response['result'] === 'success') {
+                alert("회원가입을 축하드립니다!")
+                window.location.replace("/")
+            } else {
+                alert("회원가입 실패!")
+            }
+
+
         }
     });
 

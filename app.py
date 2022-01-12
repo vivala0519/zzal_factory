@@ -78,6 +78,11 @@ def api_register():
     pw_receive = request.form['pw_give']
     nickname = request.form['nickname']
     print(nickname, id_receive)
+
+    exists = bool(db.users.find_one({"id": id_receive}))
+    if exists:
+        return jsonify({'result': 'fail'})
+
     pw_hash = hashlib.sha256(pw_receive.encode('utf-8')).hexdigest()
 
     db.users.insert_one({'id': id_receive, 'pw': pw_hash, 'nickname': nickname})
@@ -115,4 +120,4 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", port=5000, debug=True)
+    app.run("0.0.0.0", port=8000, debug=True)
