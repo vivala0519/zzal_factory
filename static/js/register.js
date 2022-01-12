@@ -70,7 +70,7 @@ function register() {
                 alert("회원가입을 축하드립니다!")
                 window.location.replace("/")
             } else {
-                alert("회원가입 실패!")
+                alert("이미 존재하는 아이디입니다.")
             }
 
 
