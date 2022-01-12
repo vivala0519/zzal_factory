@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="we are penguins!">
+    <meta property="og:title" content="짤공장!">
     <meta property="og:image"
-          content="https://user-images.githubusercontent.com/89088205/147902985-b7066e81-2280-4f3e-82f4-e37ad8ab19ef.jpg">
-    <meta property="og:description" content="짤공장!">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+          content="https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg">
+    <meta property="og:description" content="세상 짤만들기 여기 다있다!">
+    <!-- <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630"> -->
 
     <link rel="shortcut icon" href="../static/img/favi.png">
 
@@ -54,31 +54,8 @@
 <body class="overflow-x-hidden making">
 
 <main>
-    <!-- 강의를 듣고 할예정입니다. (지금은 상상설계도)
-    로그인 버튼 만들기!
-    0. hidden이나 제이쿼리 hide를 사용해서 로그인버튼의 기본상태는 숨김으로 합니다.
-    1. 변수 a를 0으로 선언
-    2. 진자문법으로 이프문 1 => 로그인하지 않은 상태에서 제너레이트와 쉐어를 누르면
-     - 알럿 (로그인해야 사용할 수 있습니다.)
-     - 변수에 카운트 1 추가
-    3. 진자문법으로 이프문 2 => 앤드 연산자를 사용해서 로그인하지 않은 상태 + 변수에 카운트가 1 이상일 경우 로그인버튼이 나타나게 합니다. -->
-    <button class="absolute w-30 top-5 right-5 border-2 bg-purple-500">login</button>
 
-    <!-- 얘는 평범하게 로그인하면 사진이 보이게끔 서버렌더링 문법!
-    추가기능이 있다면 파일업로드 기능을 적용해서 로그인한 유저의 프사를 적용해주는거! -->
-    <div class="absolute w-24 md:w-32 top-5 left-5 z-0">
-        <img src="https://i.pinimg.com/originals/14/5b/b4/145bb4de7bdf793d16e3b221caf9ce90.jpg" alt=""
-             class="w-24 h-24 md:w-24 md:h-24 object-cover rounded-2xl">
-        <a href="#"
-           class="absolute left-0 bottom-2 -ml-3 text-white p-1 text-xs bg-purple-400 hover:bg-purple-500 font-medium tracking-wider rounded-full transition ease-in duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                 class="h-4 w-4">
-                <path
-                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z">
-                </path>
-            </svg>
-        </a>
-    </div>
+    <button onclick="log_out();" class="absolute w-30 top-5 right-5 border-2 bg-purple-500">logout</button>
 
 
     <div class="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0 z-10">
@@ -130,13 +107,13 @@
                            onclick="selectzzal(this); document.getElementById('zzalback').click()">한 끗인데 5억을 태워?</a>
                         <a href="#"
                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                           onclick="selectzzal(this); document.getElementById('zzalback').click()">신사답게 행동해</a>
+                           onclick="selectzzal(this); document.getElementById('zzalback').click()">피카츄 짤</a>
                         <a href="#"
                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                           onclick="selectzzal(this); document.getElementById('zzalback').click()">또 지면 넌 변사체가 된다</a>
+                           onclick="selectzzal(this); document.getElementById('zzalback').click()">개비스콘 짤</a>
                         <a href="#"
                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                           onclick="selectzzal(this); document.getElementById('zzalback').click()">화란아, 나도 순정이 있다</a>
+                           onclick="selectzzal(this); document.getElementById('zzalback').click()">댕댕이 짤</a>
                     </div>
                 </div>
 
@@ -238,7 +215,7 @@
 
             {% if True %}
                 <img src="{{ url_for('static', filename=image_file) }}"
-                     class="relative w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md border-2 border-purple-200 shadow-md"
+                     class="relative w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md border-2 border-purple-200"
                      alt=""/>
             {% endif %}
         </div>
@@ -263,9 +240,9 @@
         Kakao.Link.sendDefault({
             objectType: 'feed',
             content: {
-                title: '짤공장',
-                description: '나만의 짤을 만들어보자!',
-                imageUrl: '카카오공유하기 시 썸네일 이미지 경로',
+                title: '짤공장!',
+                description: '세상 짤 만들기 여기 다있다!',
+                imageUrl: 'https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg',
                 link: {
                     mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
                     webUrl: '카카오공유하기 시 클릭 후 이동 경로',
@@ -273,7 +250,7 @@
             },
             buttons: [
                 {
-                    title: '짤공장 바로가기',
+                    title: '웹으로 보기',
                     link: {
                         mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
                         webUrl: '카카오공유하기 시 클릭 후 이동 경로',
