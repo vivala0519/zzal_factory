@@ -55,9 +55,7 @@
 <body class="overflow-x-hidden making">
 
 <main>
-
     <button onclick="log_out();" class="absolute w-30 top-5 right-5 border-2 bg-purple-500">logout</button>
-
 
     <div class="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0 z-10">
         <div class="flex flex-col items-center max-w-2xl md:px-8">
@@ -108,13 +106,13 @@
                            onclick="selectzzal(this); document.getElementById('zzalback').click()">한 끗인데 5억을 태워?</a>
                         <a href="#"
                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                           onclick="selectzzal(this); document.getElementById('zzalback').click()">피카츄 짤</a>
+                           onclick="selectzzal(this); document.getElementById('zzalback').click()">신사답게 행동해</a>
                         <a href="#"
                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                           onclick="selectzzal(this); document.getElementById('zzalback').click()">개비스콘 짤</a>
+                           onclick="selectzzal(this); document.getElementById('zzalback').click()">또 지면 넌 변사체가 된다</a>
                         <a href="#"
                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
-                           onclick="selectzzal(this); document.getElementById('zzalback').click()">댕댕이 짤</a>
+                           onclick="selectzzal(this); document.getElementById('zzalback').click()">화란아, 나도 순정이 있다</a>
                     </div>
                 </div>
 
@@ -216,7 +214,7 @@
 
             {% if True %}
                 <img src="{{ url_for('static', filename=image_file) }}"
-                     class="relative w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md border-2 border-purple-200"
+                     class="relative w-full max-w-screen-sm rounded shadow-2xl md:w-auto lg:max-w-screen-md border-2 border-purple-200 shadow-md"
                      alt=""/>
             {% endif %}
         </div>
@@ -228,7 +226,6 @@
 </main>
 
 </body>
-
 <script type="text/javascript">
     // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 
