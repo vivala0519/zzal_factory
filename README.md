@@ -4,6 +4,7 @@ hanghae99-ClassD-5team
 ## 프로젝트 짤공장
 
 ![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg)
+![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149085823-a0e5bcf9-7703-4109-9f9b-86d989dfcf41.jpg)
 
 * 사용기술 소개
   * python pillow
@@ -21,11 +22,11 @@ hanghae99-ClassD-5team
 소개 : 재미있는 짤을 손쉽게 제작하고 공유할 수 있는 사이트
 
 
-SSR vs CSR
+#  SSR vs CSR
 SSR은 한 번에 그려진다는 장점이 있지만,
 CSR은 전체적인 시간은 SSR보다 비슷하거나 더 오래 걸리더라도 로딩창을 먼저 보여줌으로써 사용자에게 좋은 경험을 준다.
 
-JWT
+#  JWT
 발급 후 토큰 검증만 하면 되기 때문에 추가 저장소가 필요 없다. 가볍다.
 필요한 모든 정보를 자체적으로 지니고 있기(self-contained)때문에 두 개체 사이에서 손쉽게 전달 될 수 있다.
 
