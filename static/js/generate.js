@@ -24,6 +24,10 @@ function generate() {
         img = "burning";
     } else if(zzal === "신사답게 행동해") {
         img = "gentleman";
+    } else if (zzal === "또 지면 넌 변사체가 된다") {
+        img = "youdie";
+    } else if (zzal === "화란아, 나도 순정이 있다") {
+        img = "puremind";
     }
 
 
