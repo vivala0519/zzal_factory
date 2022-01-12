@@ -4,7 +4,6 @@ hanghae99-ClassD-5team
 ## 프로젝트 짤공장
 
 ![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg)
-![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149085823-a0e5bcf9-7703-4109-9f9b-86d989dfcf41.jpg)
 
 * 사용기술 소개
   * python pillow
