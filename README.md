@@ -7,10 +7,11 @@ url : http://hpmp.shop
 ![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg)
 
 * 사용기술 소개
-  * python pillow
-  * flask Jinja2
-  * Flask JWT
-  * mongoDB
+  * Flask 
+  * pillow
+  * Jinja2
+  * PyJWT
+  * pymongo (mongoDB)
   * tailwind CSS
 
 프로젝트 기간 : 2022년 1월 10일 ~ 12일
