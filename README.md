@@ -7,9 +7,9 @@ url : http://hpmp.shop
 ![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg)
 
 * 사용기술 소개
-  * python pillow
-  * flask Jinja2
-  * Flask JWT
+  * Pillow
+  * Jinja2
+  * PyJWT
   * mongoDB
   * tailwind CSS
 
