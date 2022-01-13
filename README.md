@@ -2,7 +2,6 @@
 hanghae99-ClassD-5team
 
 ## 프로젝트 짤공장
-url : http://hpmp.shop
 
 ![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg)
 
@@ -16,7 +15,7 @@ url : http://hpmp.shop
 
 프로젝트 기간 : 2022년 1월 10일 ~ 12일
 
-웹사이트 링크 : 아직 빈값
+웹사이트 링크 : http://hpmp.shop
 
 데모영상 : 아직 빈값
 
