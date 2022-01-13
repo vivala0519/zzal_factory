@@ -6,17 +6,16 @@ url : http://hpmp.shop
 
 ![멋진 로고를 볼수 있다.](https://user-images.githubusercontent.com/89088205/149082819-1557bb6e-126f-4c81-afaa-83e1531585d1.jpg)
 
-![](https://user-images.githubusercontent.com/86070069/149243276-8b2d21a0-f4d9-45ec-8175-8dd69250402a.png)
 * 사용기술 소개
-  * Pillow
-  * Jinja2
-  * PyJWT
+  * python pillow
+  * flask Jinja2
+  * Flask JWT
   * mongoDB
   * tailwind CSS
 
 프로젝트 기간 : 2022년 1월 10일 ~ 12일
 
-웹사이트 링크 : http://hpmp.shop
+웹사이트 링크 : 아직 빈값
 
 데모영상 : 아직 빈값
 
@@ -42,3 +41,11 @@ CSR은 전체적인 시간은 SSR보다 비슷하거나 더 오래 걸리더라�
 
 # tailwindCSS
     간편하게 반응형 웹을 적용할 수 있게 해주는 CSS 라이브러리
+    
+# 우리가 해결한 문제
+    이미리 처리를 어떻게 구현할 것인가
+    -> 파이썬 라이브러리 PILLOW를 사용하여 해결하였다.
+    
+    화면 구성은 어떻게 할 것인가
+    -> 테일윈드CSS를 사용하여 짧게 한정된 기간 내에 편리하고 빠르게 구축할 수 있었다.
+    
