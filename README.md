@@ -17,7 +17,7 @@ hanghae99-ClassD-5team
 
 웹사이트 링크 : http://hpmp.shop
 
-데모영상 : 아직 빈값
+데모영상 : https://youtu.be/Df6sKdEwMY4
 
 소개 : 재미있는 짤을 손쉽게 제작하고 공유할 수 있는 사이트
 
