@@ -21,6 +21,9 @@ hanghae99-ClassD-5team
 
 소개 : 재미있는 짤을 손쉽게 제작하고 공유할 수 있는 사이트
 
+![Copy of zzal maker](https://user-images.githubusercontent.com/42686784/150622354-47789365-96a4-49ed-8bb7-c50cd4d517ba.png)
+
+
 
 #  SSR vs CSR
 SSR은 한 번에 그려진다는 장점이 있지만,
