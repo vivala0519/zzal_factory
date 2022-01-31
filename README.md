@@ -1,5 +1,5 @@
 # hanghae99-project
-hanghae99-ClassD-5team
+짤 메이킹 어플리케이션
 
 ## 프로젝트 짤공장
 
